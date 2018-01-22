@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalDateTimeTextField?>
+
+<AnchorPane fx:id="animaleAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farmApp.Controllers.animaleControler">
+   <children>
+      <AnchorPane fx:id="animalePane" layoutX="-6.0" minHeight="0.0" minWidth="0.0" prefHeight="610.0" prefWidth="812.0">
+         <children>
+            <Label layoutX="20.0" layoutY="20.0" text="ID" />
+            <Label layoutX="20.0" layoutY="140.0" text="Data Livrare" />
+            <Label layoutX="20.0" layoutY="100.0" text="Cod Animal" />
+            <Label layoutX="20.0" layoutY="180.0" text="Data Primire" />
+            <Label layoutX="20.0" layoutY="60.0" text="Activ?" />
+            <Label layoutX="20.0" layoutY="220.0" text="Motiv" />
+            <Label layoutX="20.0" layoutY="260.0" text="Nume Vinzator" />
+            <Label layoutX="20.0" layoutY="300.0" text="KG la Primire" />
+            <Label layoutX="20.0" layoutY="340.0" text="Tipul" />
+            <Label layoutX="20.0" layoutY="380.0" text="Locatia" />
+            <TextField fx:id="animalId" layoutX="103.0" layoutY="16.0" text="0" />
+            <TextField fx:id="animalCode" layoutX="103.0" layoutY="96.0" />
+            <TextField fx:id="animalMotiv" layoutX="103.0" layoutY="216.0" />
+            <TextField fx:id="animalVinzator" layoutX="103.0" layoutY="256.0" />
+            <TextField fx:id="animalKg" layoutX="103.0" layoutY="296.0" text="0" />
+            <CheckBox fx:id="animaleActivDa" layoutX="103.0" layoutY="57.0" mnemonicParsing="false" onAction="#daSelected" text="Da" />
+            <CheckBox fx:id="animaleActivNu" layoutX="159.0" layoutY="57.0" mnemonicParsing="false" onAction="#nuSelected" text="Nu" />
+            <Button fx:id="buttonAnimaleCautaId" layoutX="277.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnCautaIdClicked" text="Cauta ID" />
+            <Button fx:id="buttonAnimaleSterge" layoutX="348.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnStergeClicked" text="Sterge" />
+            <Button fx:id="buttonAnimaleGoleste" layoutX="421.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnGolesteClicked" text="Goleste " />
+            <Button fx:id="buttonAnimaleAdauga" layoutX="103.0" layoutY="416.0" mnemonicParsing="false" onAction="#btnAdaugaClicked" text="Adauga" />
+            <Button fx:id="buttonAnimaleModifica" layoutX="191.0" layoutY="416.0" mnemonicParsing="false" onAction="#btnModificaClicked" text="Modifica" />
+            <Button fx:id="buttonAnimaleCautaCod" layoutX="275.0" layoutY="83.0" mnemonicParsing="false" onAction="#btnCautaCodClicked" text="Cauta Cod" />
+            <LocalDateTimeTextField fx:id="animaleDataPrimire" layoutX="103.0" layoutY="176.0" />
+            <LocalDateTimeTextField fx:id="animaleDataLivrare" layoutX="103.0" layoutY="136.0" />
+            <PieChart fx:id="animalePieChart" layoutX="348.0" layoutY="45.0" onMouseClicked="#mouseClicked" prefHeight="319.0" prefWidth="438.0" />
+            <TableView fx:id="animaleTable" layoutX="9.0" layoutY="444.0" prefHeight="154.0" prefWidth="794.0">
+               <columns>
+                  <TableColumn fx:id="columnId" prefWidth="30.0" text="ID" />
+                  <TableColumn fx:id="columnActiv" prefWidth="65.0" text="Activ?" />
+                  <TableColumn fx:id="columnCod" prefWidth="111.0" text="Cod" />
+                  <TableColumn fx:id="columnDataLivrare" prefWidth="114.0" text="Data Livrare" />
+                  <TableColumn fx:id="columnDataPrimire" prefWidth="114.0" text="Data Primire" />
+                  <TableColumn fx:id="columnMotiv" prefWidth="91.0" text="Motiv" />
+                  <TableColumn fx:id="columnVinzator" text="Vinzator" />
+                  <TableColumn fx:id="columnKG" prefWidth="59.0" text="KG" />
+                  <TableColumn fx:id="columnTipul" prefWidth="56.0" text="Tipul" />
+                  <TableColumn fx:id="columnLocatia" prefWidth="50.0" text="Locatia" />
+               </columns></TableView>
+            <ComboBox fx:id="animaleTip" layoutX="103.0" layoutY="336.0" onMouseClicked="#cliked" prefWidth="150.0" />
+            <ComboBox fx:id="AnimaleLocatie" layoutX="103.0" layoutY="376.0" onAction="#locatiaSelected" onMouseClicked="#locClick" prefWidth="150.0" />
+            <Button fx:id="btnExcel" layoutX="690.0" layoutY="404.0" mnemonicParsing="false" onAction="#btnExcel" text="Genereaza Excel" />
+            <Button fx:id="btnPDF" layoutX="540.0" layoutY="404.0" mnemonicParsing="false" onAction="#btnPDF" text="Genereaza PDF" />
+            <Label fx:id="roleLabel" layoutX="654.0" layoutY="10.0" prefHeight="37.0" prefWidth="149.0" textAlignment="RIGHT" textFill="#512828">
+               <font>
+                  <Font name="Arial Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import jfxtras.scene.control.LocalDateTimeTextField?>
+
+<Pane id="usersPanel" fx:id="usersPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farmApp.Controllers.UsersPanelController">
+   <children>
+      <Label layoutX="20.0" layoutY="20.0" text="Nume Utilizator" />
+      <Label layoutX="20.0" layoutY="60.0" text="Activ?" />
+      <Label layoutX="20.0" layoutY="100.0" text="Data Creare" />
+      <Label layoutX="20.0" layoutY="140.0" text="Data Expirare" />
+      <Label layoutX="20.0" layoutY="220.0" text="Parola" />
+      <Label layoutX="20.0" layoutY="180.0" text="Activat?" />
+      <Label layoutX="20.0" layoutY="260.0" text="Confirmarea Parolei" />
+      <Label layoutX="20.0" layoutY="340.0" text="Rolul" />
+      <Label layoutX="20.0" layoutY="300.0" text="Data Modificare" />
+      <TextField id="textFieldUsersName" fx:id="usersUsername" layoutX="140.0" layoutY="16.0" />
+      <TextField id="textFieldUsersPasswordConfirm" fx:id="usersPasswordConfirm" layoutX="140.0" layoutY="257.0" />
+      <TextField id="textFieldUsersPassword" fx:id="usersPassword" layoutX="142.0" layoutY="216.0" />
+      <CheckBox id="checkBoxUsersActiveDa" fx:id="usersActiveDa" layoutX="139.0" layoutY="60.0" mnemonicParsing="false" onAction="#activDa" text="Da" />
+      <CheckBox id="checkBoxUsersActiveNu" fx:id="usersActiveNu" layoutX="197.0" layoutY="60.0" mnemonicParsing="false" onAction="#activNu" text="Nu" />
+      <LocalDateTimeTextField id="dateTimeUsersCreare" fx:id="usersDataCreare" layoutX="140.0" layoutY="96.0" />
+      <LocalDateTimeTextField id="dateTimeUsersExpirare" fx:id="usersDataExpirare" layoutX="140.0" layoutY="136.0" />
+      <LocalDateTimeTextField id="dateTimeUsersModificare" fx:id="usersDateModificare" layoutX="140.0" layoutY="296.0" />
+      <CheckBox id="checkBoxUsersEnabledDa" fx:id="usersEnabledDa" layoutX="139.0" layoutY="180.0" mnemonicParsing="false" onAction="#activatDa" text="Da" />
+      <CheckBox id="checkBoxUsersEnabledNu" fx:id="usersEnabledNu" layoutX="196.0" layoutY="180.0" mnemonicParsing="false" onAction="#activatNu" text="Nu" />
+      <TableView id="usersTable" fx:id="usersTable" layoutX="4.0" layoutY="436.0" prefHeight="160.0" prefWidth="791.0">
+         <columns>
+            <TableColumn fx:id="columnUsername" prefWidth="117.0" text="Nume Utilizator" />
+            <TableColumn fx:id="columnActiv" prefWidth="71.0" text="Activ?" />
+            <TableColumn fx:id="columnCreare" prefWidth="145.0" text="Data Creare" />
+            <TableColumn fx:id="columnExpirare" prefWidth="148.0" text="Data Expirare" />
+            <TableColumn fx:id="columnActivat" prefWidth="53.0" text="Activat?" />
+            <TableColumn fx:id="columnModificare" prefWidth="171.0" text="Data Modificare" />
+            <TableColumn fx:id="columnRolul" prefWidth="85.0" text="Rolul" />
+         </columns>
+      </TableView>
+      <Button id="buttonUsersAdauga" fx:id="usersButtonAdauga" layoutX="139.0" layoutY="371.0" mnemonicParsing="false" onAction="#btnAdauga" text="Adauga" />
+      <Button id="buttonUsersModifica" fx:id="usersButtonModifica" layoutX="228.0" layoutY="371.0" mnemonicParsing="false" onAction="#btnModifica" text="Modifica" />
+      <Button id="buttonUsersCauta" fx:id="usersButtonCauta" layoutX="320.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnCauta" text="Cauta" />
+      <Button id="buttonUsersSterge" fx:id="usersButtonSterge" layoutX="400.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSterge" text="Sterge" />
+      <Button id="buttonUsersGoleste" fx:id="usersButtonGoleste" layoutX="479.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnGoleste" text="Goleste" />
+      <ComboBox fx:id="checkBoxUsersRolul" layoutX="139.0" layoutY="336.0" prefWidth="150.0" />
+      <Label fx:id="passwordLabel" layoutX="292.0" layoutY="236.0" prefHeight="66.0" prefWidth="149.0" />
+   </children>
+</Pane>

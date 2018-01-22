@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="AmplasarePanel" fx:id="amplasarePanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farmApp.Controllers.AmplasarePanelController">
+   <children>
+      <Label layoutX="20.0" layoutY="60.0" text="Cladirea" />
+      <Label layoutX="20.0" layoutY="20.0" text="ID" />
+      <Label layoutX="20.0" layoutY="140.0" text="Detaliul 1" />
+      <Label layoutX="20.0" layoutY="100.0" text="Camera" />
+      <Label layoutX="20.0" layoutY="180.0" text="Detaliul 2" />
+      <Label layoutX="20.0" layoutY="220.0" text="Detaliul 3" />
+      <Label layoutX="20.0" layoutY="300.0" text="Sector" />
+      <Label layoutX="20.0" layoutY="260.0" text="Locatia" />
+      <TextField id="textFieldAmplasareaId" fx:id="amplasareId" layoutX="97.0" layoutY="16.0" />
+      <TextField id="textFieldAmplasareaCladirea" fx:id="amplasareCladirea" layoutX="97.0" layoutY="56.0" />
+      <TextField id="textFieldAmplasareaCamera" fx:id="amplasareCamera" layoutX="97.0" layoutY="96.0" />
+      <TextField id="textFieldAmplasareaDetaliul1" fx:id="amplasareDetaliul1" layoutX="97.0" layoutY="136.0" />
+      <TextField id="textFieldAmplasareaDetaliul2" fx:id="amplasareDetaliul2" layoutX="97.0" layoutY="176.0" />
+      <TextField id="textFieldAmplasareaSector" fx:id="amplasareSector" layoutX="97.0" layoutY="296.0" />
+      <TextField id="textFieldAmplasareaLocatia" fx:id="amplasareLocatia" layoutX="97.0" layoutY="256.0" />
+      <TextField id="textFieldAmplasareaDetaliul3" fx:id="amplasareDetaliul3" layoutX="97.0" layoutY="216.0" />
+      <Button id="buttonAmplasareaAdauga" fx:id="buttonAmplasareAdauga" layoutX="97.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnAdauga" text="Adauga" />
+      <Button id="buttonAmplasareaModifica" fx:id="buttonAmplasareModifica" layoutX="183.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnModifica" text="Modifica" />
+      <Button id="buttonAmplasareaCauta" fx:id="buttonAmplasareCauta" layoutX="289.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnCauta" text="Cauta" />
+      <Button id="buttonAmplasareaSterge" fx:id="buttonAmplasareSterge" layoutX="360.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSterge" text="Sterge" />
+      <Button id="buttonAmplasareaGoleste" fx:id="buttonAmplasareGoleste" layoutX="430.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnGoleste" text="Goleste" />
+      <TableView id="amplasareTable" fx:id="amplasareTable" layoutX="3.0" layoutY="369.0" prefHeight="230.0" prefWidth="793.0">
+         <columns>
+            <TableColumn fx:id="columnId" prefWidth="40.0" text="ID" />
+            <TableColumn fx:id="columnCladirea" prefWidth="110.0" text="Cladirea" />
+            <TableColumn fx:id="columnCamera" prefWidth="75.0" text="Camera" />
+            <TableColumn fx:id="columnDetaliul1" prefWidth="104.0" text="Detaliul 1" />
+            <TableColumn fx:id="columnDetaliul2" prefWidth="95.0" text="Detaliul 2" />
+            <TableColumn fx:id="columnDetaliul3" prefWidth="95.0" text="Detaliul 3" />
+            <TableColumn fx:id="columnLocatia" prefWidth="139.0" text="Locatia" />
+            <TableColumn fx:id="columnSector" minWidth="0.0" prefWidth="132.0" text="Sector" />
+         </columns>
+      </TableView>
+      <Label fx:id="roleLabel" layoutX="647.0" layoutY="9.0" prefHeight="40.0" prefWidth="149.0" textAlignment="RIGHT" textFill="#612b2b" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Arial Italic" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+   </children>
+</Pane>

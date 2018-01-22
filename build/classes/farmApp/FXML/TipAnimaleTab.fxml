@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalDateTimeTextField?>
+
+<Pane id="TipAnimalePanel" fx:id="tipAnimalePanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farmApp.Controllers.TipAnimaleController">
+   <children>
+      <Label layoutX="20.0" layoutY="20.0" text="ID" />
+      <Label layoutX="20.0" layoutY="60.0" text="Activ?" />
+      <Label layoutX="20.0" layoutY="100.0" text="Data Creare" />
+      <Label layoutX="20.0" layoutY="140.0" text="Tipul" />
+      <Label layoutX="20.0" layoutY="180.0" text="Data Modificare" />
+      <TextField id="textFieldTipAnimaleTipul" fx:id="tipAnimaleTip" layoutX="115.0" layoutY="136.0" />
+      <TextField id="textFieldTipAnimaleId" fx:id="tipAnimaleId" layoutX="115.0" layoutY="16.0" />
+      <CheckBox fx:id="tipAnimaleActiveDa" layoutX="115.0" layoutY="60.0" mnemonicParsing="false" onAction="#checkDa" text="Da" />
+      <CheckBox fx:id="tipAnimaleActiveNu" layoutX="175.0" layoutY="60.0" mnemonicParsing="false" onAction="#checkNu" text="Nu" />
+      <LocalDateTimeTextField id="dateTimeTipCreare" fx:id="tipAnimaleDataCreare" layoutX="116.0" layoutY="96.0" />
+      <LocalDateTimeTextField id="dateTimeTipModificare" fx:id="tipAnimaleDataModificare" layoutX="115.0" layoutY="176.0" />
+      <TableView id="tipTable" fx:id="tipAnimaleTable" layoutX="3.0" layoutY="251.0" prefHeight="348.0" prefWidth="794.0">
+         <columns>
+            <TableColumn fx:id="columnId" prefWidth="53.0" text="ID" />
+            <TableColumn fx:id="columnActiv" prefWidth="125.0" text="Activ?" />
+            <TableColumn fx:id="columnDataCreare" prefWidth="235.0" text="Data Creare" />
+            <TableColumn fx:id="columnTipul" minWidth="0.0" prefWidth="136.0" text="Tipul" />
+            <TableColumn fx:id="columnDataModificare" prefWidth="225.0" text="Data Modificare" />
+         </columns>
+      </TableView>
+      <Button id="buttonTipAdauga" fx:id="tipAnimaleButtonAdauga" layoutX="115.0" layoutY="217.0" mnemonicParsing="false" onAction="#btnAddClick" text="Adauga" />
+      <Button id="buttonTipModifica" fx:id="tipAnimaleButtonModifica" layoutX="180.0" layoutY="217.0" mnemonicParsing="false" onAction="#btnModClick" text="Modifica" />
+      <Button id="buttonTipCauta" fx:id="tipAnimaleButtonCauta" layoutX="306.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnCautaClick" text="Cauta" />
+      <Button id="buttonTipSterge" fx:id="tipAnimaleButtonSterge" layoutX="377.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnStergeClick" text="Sterge" />
+      <Button id="buttonTipGoleste" fx:id="tipAnimaleButtonGoleste" layoutX="450.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnGolesteClick" text="Goleste" />
+      <PieChart id="tipPieChart" fx:id="tipAnimalePieChart" layoutX="286.0" layoutY="81.0" prefHeight="271.0" prefWidth="494.0" />
+      <Label fx:id="roleLabel" layoutX="631.0" layoutY="6.0" prefHeight="32.0" prefWidth="149.0" textAlignment="RIGHT" textFill="#572929">
+         <font>
+            <Font name="Arial Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

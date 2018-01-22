@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import jfxtras.scene.control.LocalDateTimeTextField?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farmApp.Controllers.personalTabController">
+   <children>
+      <TextField id="textFieldPersonalID" fx:id="personalId" layoutX="122.0" layoutY="16.0" />
+      <Label layoutX="20.0" layoutY="20.0" text="ID" />
+      <Label layoutX="20.0" layoutY="260.0" text="Data Concediere" />
+      <Label layoutX="20.0" layoutY="60.0" text="Activ?" />
+      <Label layoutX="20.0" layoutY="220.0" text="Data Angajare" />
+      <Label layoutX="20.0" layoutY="100.0" text="Nume" />
+      <Label layoutX="20.0" layoutY="140.0" text="Prenume" />
+      <Label layoutX="20.0" layoutY="180.0" text="Functia" />
+      <TextField id="textFieldPersonalNume" fx:id="personalNume" layoutX="122.0" layoutY="96.0" />
+      <TextField id="textFieldPersonalPrenume" fx:id="personalPreume" layoutX="122.0" layoutY="136.0" />
+      <TextField id="textFieldPersonalFunctia" fx:id="personalFunctia" layoutX="122.0" layoutY="176.0" />
+      <CheckBox id="CheckBoxPersonalActiveDa" fx:id="personalActivDa" layoutX="123.0" layoutY="60.0" mnemonicParsing="false" onAction="#activDa" text="Da" />
+      <CheckBox id="CheckBoxPersonalActiveNu" fx:id="personalActivNu" layoutX="203.0" layoutY="60.0" mnemonicParsing="false" onAction="#activNu" text="Nu" />
+      <LocalDateTimeTextField id="dateTimePersonalAngajare" fx:id="personalDataAngajare" layoutX="123.0" layoutY="216.0" />
+      <LocalDateTimeTextField id="dateTimePersonalConcediere" fx:id="personalDataConcediere" layoutX="123.0" layoutY="256.0" />
+      <TableView id="tabelPersonal" fx:id="personalTable" layoutX="1.0" layoutY="341.0" prefHeight="258.0" prefWidth="800.0">
+         <columns>
+            <TableColumn fx:id="columnId" prefWidth="34.0" text="ID" />
+            <TableColumn fx:id="columnActiv" prefWidth="73.0" text="Activ?" />
+            <TableColumn fx:id="columnNume" prefWidth="105.0" text="Nume" />
+            <TableColumn fx:id="columnPrenume" prefWidth="134.0" text="Prenume" />
+            <TableColumn fx:id="columnFunctia" prefWidth="101.0" text="Functia" />
+            <TableColumn fx:id="columnDataAngajare" prefWidth="175.0" text="Data Angajare" />
+            <TableColumn fx:id="columnDataConcediere" prefWidth="155.0" text="Data Concediere" />
+         </columns>
+      </TableView>
+      <Button id="buttonPersonalAdauga" fx:id="personalButtonAdauga" layoutX="123.0" layoutY="300.0" mnemonicParsing="false" onAction="#btnAdauga" text="Adauga" />
+      <Button id="buttonPersonalModifica" fx:id="personalButtonModifica" layoutX="222.0" layoutY="300.0" mnemonicParsing="false" onAction="#btnModifica" text="Modifica" />
+      <Button id="buttonPersonalCauta" fx:id="personalButtonCauta" layoutX="290.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnCauta" text="Cauta" />
+      <Button id="buttonPersonalSterge" fx:id="personalButtonSterge" layoutX="360.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnSterge" text="Sterge" />
+      <Button id="buttonPersonalGoleste" fx:id="personalButtonGoleste" layoutX="430.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnGoleste" text="Goleste" />
+      <Label fx:id="roleLabel" layoutX="637.0" layoutY="12.0" prefHeight="33.0" prefWidth="149.0" textAlignment="RIGHT" textFill="#4d2929">
+         <font>
+            <Font name="Arial Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

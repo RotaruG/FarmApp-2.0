@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TabPane layoutX="165.0" layoutY="120.0" prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab fx:id="animale" text="Animale">
+                    <AnchorPane prefHeight="631.0" prefWidth="858.0">
+                        <fx:include fx:id="animaleTab" source="AnimaleTab.fxml" />
+                    </AnchorPane>
+                </Tab>
+                   <Tab fx:id="tipAnimale" text="Tip Animale">
+                    <AnchorPane>
+                        <fx:include fx:id="tipAnimaleTab" source="TipAnimaleTab.fxml" />
+                    </AnchorPane>
+                   </Tab>
+                   <Tab fx:id="amplasarea" text="Amplasarea">
+                    <AnchorPane>
+                        <fx:include fx:id="amplasareTab" source="AmplasareTab.fxml" />
+                    </AnchorPane>
+                   </Tab>
+                   <Tab fx:id="vet" text="Veterinar">
+                    <AnchorPane>
+                        <fx:include fx:id="vetTab" source="VetTab.fxml" />
+                    </AnchorPane>
+                   </Tab>
+                   <Tab fx:id="personal" text="Personal">
+                    <AnchorPane>
+                        <fx:include fx:id="personalTab" source="PersonalTab.fxml" />
+                    </AnchorPane>
+                   </Tab>
+                   <Tab fx:id="users" text="Utilizatori">
+                    <AnchorPane>
+                        <fx:include fx:id="usersTab" source="UsersTab.fxml" />
+                    </AnchorPane>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FarmApp.jnlp">
+  <information>
+    <title>FarmApp</title>
+    <vendor>RG</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="FarmAppFX.jar" size="124189" download="eager" />
+    <jar href="lib\curvesapi-1.03.jar" size="92241" download="eager" />
+    <jar href="lib\itextpdf-5.4.3.jar" size="2070978" download="eager" />
+    <jar href="lib\javax.persistence-2.1.0-rc1.jar" size="162126" download="eager" />
+    <jar href="lib\jfxtras-labs-samples-8.0-r6-SNAPSHOT-all.jar" size="4785232" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\poi-3.14-20160307.jar" size="2528204" download="eager" />
+    <jar href="lib\poi-ooxml-3.14-20160307.jar" size="1286511" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-3.14-20160307.jar" size="5919795" download="eager" />
+    <jar href="lib\xmlbeans-2.6.0.jar" size="2730866" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="FarmApp" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="farmApp.StartApps"  name="FarmApp" />
+  <update check="always"/>
+</jnlp>
